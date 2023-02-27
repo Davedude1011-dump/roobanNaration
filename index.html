@@ -16,6 +16,10 @@
                 <source class="audio" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
+            <select id="voices" onchange="setNarrator(this.value)">
+                <option value="Rooban">Rooban</option>
+                <option value="Woody">Woody</option>
+              </select>
             <button onclick="next()">next</button>
         </div>
     </body>

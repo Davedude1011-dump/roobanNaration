@@ -48,7 +48,14 @@ button:hover {
     padding-bottom: 8px;
     filter: brightness(100%)
 }
-
+select {
+    margin-left: 1%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+}
 
 @media screen and (orientation: portrait) {
     .heading {

@@ -1,5 +1,6 @@
 var storyNum = 0
 var storyList = ["story1", "story2"]
+var narrator = localStorage.getItem("narrator")
 
 function next() {
     if (storyList[storyNum] == storyList[storyList.length-1]) {
@@ -36,7 +37,17 @@ function loadText() {
       });
     
     // sets audio
-    document.querySelector("audio").src = "storys/" + storyList[storyNum] + "audio.mp3";
+    document.querySelector("audio").src = "storys/" + storyList[storyNum] + "audio" + narrator + ".mp3";
 }
 
-window.onload = loadText()
+function setNarrator(narratorName) {
+    localStorage.setItem("narrator", narratorName)
+    narrator = localStorage.getItem("narrator")
+    loadText()
+    console.log(localStorage.getItem("narrator"))
+}
+
+window.onload = function() {
+    localStorage.setItem("narrator", "Rooban")
+    loadText()
+}
