@@ -1,5 +1,5 @@
 var storyNum = 0
-var storyList = ["story1", "story2"]
+var storyList = ["story1", "story2", "story3", "story4", "story5"]
 var narrator = localStorage.getItem("narrator")
 
 function next() {
